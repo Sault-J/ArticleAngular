@@ -1,0 +1,12 @@
+
+<div style="background-color: bisque; margin-bottom: 10px;">
+    <a href="{{article.link}}"> {{article.title}}</a>
+    <div>{{article.votes}} Points</div>
+    
+    <button type="button" (click)="voteUp()" >Vote Up</button>
+    <button type="button" (click)="voteDown()" >Vote Down</button>
+    <button type="button" (click)="deleteArticle(article)" >Delete</button>
+    <button type="button" (click)="selectArticle(article)" >Update</button>
+</div>
+
+
