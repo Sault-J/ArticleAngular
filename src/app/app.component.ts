@@ -19,6 +19,7 @@ export class AppComponent {
 
   
 
+  
   constructor(private service: HttpserviceService){
     
   }
@@ -65,6 +66,22 @@ export class AppComponent {
     
     return false
   }
+
+  //Create V2
+  addArticle2(art: ArticleModel){
+    console.log(`Adding article title: ${art.title} and link: ${art.link}`)
+    this.service.addArticle(new ArticleModel(art.title, art.link))
+    .subscribe(data => {
+      this.getArticles()
+    })
+    location.reload()
+    
+    
+    return false
+  }
+
+
+
 
   //Delete
   deleteArticle(id: number){
